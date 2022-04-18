@@ -53,7 +53,7 @@ Yes, you want one.
 
 Since March 2022, docker desktop is a paid subscription, so you can replace it with another container runtime through VM:
 
-* [rancher desktop](https://rancherdesktop.io/) (STILL SOME ISSUES WITH certs, so for now use docker desktop)
+* [rancher desktop](https://rancherdesktop.io/) (STILL SOME ISSUES WITH certs)
 * [lima](https://github.com/lima-vm/lima)
 * [colima](https://github.com/abiosoft/colima)
 

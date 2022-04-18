@@ -1,6 +1,6 @@
 # REST API
 
-To keep thiongs simple, we won't use GRPC and GRPC gateway for now.
+To keep things simple, we won't use GRPC and GRPC gateway for now.
 As we want to keep the compatibility with other services in the company, it's best to stick (for now) to the simplest implementation of REST APIs.
 
 ## Naming things (MUST)
@@ -18,6 +18,8 @@ Many choices here, from gorilla/mux to gin...
 **My preference goes to [go-chi](https://go-chi.io/#/)**
 
 One important point to note: try not to use a "context based" router, it does not play well with a lot of middlewares.
+
+Use the major (semantic) version in the URL to allow a deterministic response type while the API can evolve.
 
 😈: look fasthttprouter is on top of the benchmarks!
     sure... but it does not take stdlib http handlers, so it will prevent you from migrating to other router once yours is deprecated or not fashionable anymore.

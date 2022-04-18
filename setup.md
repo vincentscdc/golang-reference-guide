@@ -48,21 +48,23 @@ brew install k6 trivy
 ## (OPTIONAL) a local kubernetes cluster and docker build locally
 
 Yes, you want one.
-Since March 2022, docker desktop is a paid subscription, so you can replace it with another local k8s.
-It is a combination of [rancher desktop](https://rancherdesktop.io/) and [k3d](https://k3d.io/v5.4.1/).
 
-* Download rancher desktop from the [link](https://rancherdesktop.io/)
-* Install rancher desktop and *do not enable kubernetes*
-* Look into the utilities and *install docker only*. You might have to chown the /usr/local/bin first:
+### First, have a container runtime
+
+Since March 2022, docker desktop is a paid subscription, so you can replace it with another container runtime through VM:
+
+* [rancher desktop](https://rancherdesktop.io/) (STILL SOME ISSUES WITH certs, so for now use docker desktop)
+* [lima](https://github.com/lima-vm/lima)
+* [colima](https://github.com/abiosoft/colima)
+
+### Running your cluster on docker
+
+Via [k3d](https://k3d.io/v5.4.1/), you can setup your cluster with a simple config file, whatever the container runtime you have (almost).
+
+* Install k3d, kubectl, docker, helm via brew
 
 ```bash
-sudo chown $USER /usr/local/bin
-```
-
-* Install k3d, kubectl, helm via brew
-
-```bash
-brew install kubectl helm k3d
+brew install kubectl helm k3d docker
 ```
 
 ### If you want to test your services with local https

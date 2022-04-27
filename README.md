@@ -20,6 +20,10 @@ We will follow a combination of
 * [REST APIs](./restapi.md)
 * [Crypto.com golang modules](./cro-modules.md)
 
+## Internal libraries
+
+Here is the repo: [golang-common](https://github.com/monacohq/golang-common)
+
 ## Specific topics
 
 * [RDBMS](./rdbms.md)

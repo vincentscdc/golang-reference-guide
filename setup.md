@@ -49,27 +49,7 @@ brew install k6 trivy
 
 Yes, you want one.
 
-### First, have a container runtime
-
-Since March 2022, docker desktop is a paid subscription, so you can replace it with another container runtime through VM:
-
-* [rancher desktop](https://rancherdesktop.io/) (STILL SOME ISSUES WITH certs)
-* [lima](https://github.com/lima-vm/lima)
-* [colima](https://github.com/abiosoft/colima)
-
-### Running your cluster on docker
-
-Via [k3d](https://k3d.io/v5.4.1/), you can setup your cluster with a simple config file, whatever the container runtime you have (almost).
-
-* Install k3d, kubectl, docker, helm via brew
-
-```bash
-brew install kubectl helm k3d docker
-```
-
-### If you want to test your services with local https
-
-* mkcert: generate certs valid for your local computer (to serve and access your service via https for ex)
+You can follow the setup in the [infra-local-k8s repo](https://github.com/monacohq/infra-local-k8s)
 
 ## Conclusion
 

@@ -34,8 +34,6 @@ caveat: for any case with joins and/or dynamic queries, do not use sqlc yet, it'
 
 Learn SQL!
 
-
-
 #### 😈 why not gorm / gorp / pop ... ?
 
 Benches on the latest versions of differents ORMs:

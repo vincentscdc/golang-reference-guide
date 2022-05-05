@@ -2,11 +2,8 @@
 
 ## Drivers and connection
 
-Refer to [pgx](https://github.com/jackc/pgx)
-
-### Postgres connection
-
-Refer to [pgx](https://github.com/jackc/pgx)
+[lib/pq](https://github.com/lib/pq) is now in maintenance mode (see README).
+Hence, use [pgx](https://github.com/jackc/pgx)
 
 ## Modeling, Querying (DDL, DML)
 
@@ -18,21 +15,26 @@ In a few words: abstract your DB interactions from the business logic
 
 ### Packages to use
 
-#### Selection criterias
+#### Selection criteria
 
 * Development speed
 * Cockroachdb compatibility
 * Postgres compatibility
 * Performance
+* Type safety
 
 #### Choices
 
-* Fastest, especially in simple CRUD dev, with no embedded structs: [sqlc](https://github.com/kyleconroy/sqlc)
-* Complex queries, lots of joins: [sqlboiler](https://github.com/volatiletech/sqlboiler)
+* Type safe, fast, especially in simple CRUD dev: [sqlc](https://github.com/kyleconroy/sqlc)
+caveat: for any case with joins and/or dynamic queries, do not use sqlc yet, it's not available [yet](https://github.com/kyleconroy/sqlc/discussions/363)
+
+* Type safe, complex queries, lots of joins and dynamic queries (a better ORM): [sqlboiler](https://github.com/volatiletech/sqlboiler)
 * Also a good choice, but a bit more boilerplate: [sqlx](https://github.com/jmoiron/sqlx)
 * For the best perf, use raw queries with [pgx](https://github.com/jackc/pgx)
 
 Learn SQL!
+
+
 
 #### 😈 why not gorm / gorp / pop ... ?
 
@@ -93,12 +95,6 @@ BenchmarkPopUpdate/pop-8                           38670             30268 ns/op
 ```
 
 I think this speaks better than anything.
-
-### Complex objects derived from normalized DB
-
-Sometimes, you will have to "derive" an object from the one created by the sqlc lib. In that case, make sure to keep it simple and benchmark.
-
-(TODO: add an example)
 
 ## Migrations
 

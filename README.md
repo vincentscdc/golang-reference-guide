@@ -26,6 +26,7 @@ Here is the repo: [golang-common](https://github.com/monacohq/golang-common)
 
 ## Specific topics
 
+* [Money representation](./money.md)
 * [RDBMS](./rdbms.md)
 * [NoSQL](./nosql.md)
 * [Configuration](./configuration.md)

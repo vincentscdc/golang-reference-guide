@@ -34,7 +34,7 @@ It also forces you to follow [git conventional commits](https://www.conventional
 * Install [vscode](https://code.visualstudio.com/download)
 * Install the golang extension (look in the plugins and search "@popular golang", it should be the first one).
 * In the vscode preferences, search for go lint tool and select golangci-lint.
-* In the vscode preferences, search for go format tool and select gofumports.
+* In the vscode preferences, search for go format tool and select gofumpt.
 
 ## nice to have companions
 

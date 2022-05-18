@@ -32,7 +32,7 @@ clone it, remove the .git folder, rename the things you need to rename and you a
 Make sure to look at the Makefile at the root of the project.
 **You should be able to test, lint, bench, build.**
 
-**Make sure you have a .golangci.toml config file in your folder.**
+**Make sure you have a [.golangci.toml](https://github.com/monacohq/golang-common/blob/main/.golangci.toml) config file in your folder.**
 
 For other things, refer to specific topics in the [README](./README.md)
 

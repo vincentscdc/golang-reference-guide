@@ -16,7 +16,7 @@ brew install golang
 brew install golangci-lint
 ```
 
-In order to have a somewhate reproducible linting experience, you MUST use a config file, .golangci.toml.
+In order to have a somewhate reproducible linting experience, you MUST use a config file, [.golangci.toml](https://github.com/monacohq/golang-common/blob/main/.golangci.toml).
 You can access the reference one in the reference folder.
 
 ### Git changelog

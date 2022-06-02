@@ -65,7 +65,7 @@ Not only it allows you to have better test coverage, simpler code but it also al
 
 ## Reference public repositories
 
-* [from user evrone](https://github.com/evrone/go-clean-template)
+* [from evrone](https://github.com/evrone/go-clean-template)
 * [from watermill](https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example)
 
 ## Inspiration for good API structures and architectures

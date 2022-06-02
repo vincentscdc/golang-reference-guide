@@ -32,7 +32,7 @@ caveat: for any case with joins and/or dynamic queries, do not use sqlc yet, it'
 * Also a good choice, but a bit more boilerplate: [sqlx](https://github.com/jmoiron/sqlx)
 * For the best perf, use raw queries with [pgx](https://github.com/jackc/pgx)
 
-Learn SQL! 
+Learn SQL!
 
 A good place to start is Danny Ma's [8Weeks SQL Challenge](https://8weeksqlchallenge.com/).
 

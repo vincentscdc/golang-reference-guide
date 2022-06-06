@@ -8,6 +8,20 @@ make sure you have [brew](https://brew.sh/) installed or another package manager
 brew install golang
 ```
 
+## Go Package Manager
+
+Go has a native module system that function as package management. More here: https://go.dev/blog/using-go-modules
+
+To initialise, use `go mod init`. This will generate 2 files:
+- go.mod
+- go.sum
+
+`go.mod` is similar to *package.json*, and `go.sum` is similar to *package.lock* in Node.
+
+Adding a new dependency in Go uses `go get url-to-package`. This will update the `go.mod` and `go.sum` files.
+
+Using `go mod vendor` will create put all your dependencies in a `vendor` folder within your project directory.
+
 ## MUST installs
 
 ### golang linter

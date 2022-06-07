@@ -10,9 +10,10 @@ brew install golang
 
 ## Go Package Manager
 
-Go has a native module system that function as package management. More here: https://go.dev/blog/using-go-modules
+Go has a native module system that function as package management. More [here](https://go.dev/blog/using-go-modules).
 
 To initialise, use `go mod init`. This will generate 2 files:
+
 - go.mod
 - go.sum
 
@@ -45,9 +46,9 @@ It also forces you to follow [git conventional commits](https://www.conventional
 
 ### vscode and plugins
 
-* Install [vscode](https://code.visualstudio.com/download)
-* Install the golang extension (look in the plugins and search "@popular golang", it should be the first one).
-* In the vscode preferences, simply add the following json to the json preferences:
+- Install [vscode](https://code.visualstudio.com/download)
+- Install the golang extension (look in the plugins and search "@popular golang", it should be the first one).
+- In the vscode preferences, simply add the following json to the json preferences:
 
 ```json
     "gopls": {
@@ -62,8 +63,8 @@ It also forces you to follow [git conventional commits](https://www.conventional
 
 ## nice to have companions
 
-* k6: bench your API, locally or anywhere. Can be useful to profile your API.
-* trivy: security scanner (docker image and source) that can be useful
+- k6: bench your API, locally or anywhere. Can be useful to profile your API.
+- trivy: security scanner (docker image and source) that can be useful
 
 ```bash
 brew install k6 trivy

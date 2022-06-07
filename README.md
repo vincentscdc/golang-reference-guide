@@ -1,6 +1,6 @@
 # Golang at crypto.com
 
-## Starting up!
+## Starting up
 
 * [Intro](./intro.md)
 * [Setup](./setup.md)

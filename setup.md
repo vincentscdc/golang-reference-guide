@@ -47,8 +47,18 @@ It also forces you to follow [git conventional commits](https://www.conventional
 
 * Install [vscode](https://code.visualstudio.com/download)
 * Install the golang extension (look in the plugins and search "@popular golang", it should be the first one).
-* In the vscode preferences, search for go lint tool and select golangci-lint.
-* In the vscode preferences, search for go format tool and select gofumpt.
+* In the vscode preferences, simply add the following json to the json preferences:
+
+```json
+    "gopls": {
+        "formatting.gofumpt": true,
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.toolsManagement.autoUpdate": true,
+```
 
 ## nice to have companions
 

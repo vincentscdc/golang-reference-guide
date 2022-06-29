@@ -1,0 +1,145 @@
+# golang errors
+
+2022-06-29 Vincent Serpoul
+
+## background 
+
+## What is error handling
+
+- Defining errors
+- Propagating errors and gathering context
+- Reacting to specific errors
+- Reporting errors
+
+## What an error report can contain
+
+- Error cause: a description of why an operation has failed
+- Context: any info relevant to an error
+  - userid, requestid, uri...
+  - no sensitive data must appear in errors as it might be sent later on
+- Error fix: information about how to fix the error
+
+## In the past
+
+.play past/main.go /START OMIT/,/END OMIT/
+
+## go 1.13
+
+- [errors](https://pkg.go.dev/errors) package
+- Available functions
+  - func As(err error, target any) bool
+  - func Is(err, target error) bool
+  - func New(text string) error
+  - func Unwrap(err error) error
+
+## func As(err error, target any) bool
+
+too big to fit :'( 
+
+## func Is(err, target error) bool
+
+.play ./pkg113/is/main.go /START OMIT/,/END OMIT/
+
+## func Unwrap(err error) error
+
+.play ./pkg113/unwrap/main.go
+
+## Defining errors
+
+## inline, with no type definition
+
+.play ./errs/inline/main.go
+
+*(+)*
+- simple to write
+- no runtime penalty
+
+*(-)*
+- no match
+
+## sentinel errors
+
+.play ./errs/sentinel/main.go
+
+*(+)*
+- simple to write
+- no runtime penalty
+
+*(-)*
+- limited details and handling (only pure ==)
+
+## custom error type (avoiding globals)
+
+.play ./errs/customerr1/main.go /START OMIT/,/END OMIT/
+
+*(+)*
+- match on error possible
+
+*(-)*
+- binary size penalty
+- verbose
+
+## custom error type (detailed errors)
+
+.play ./errs/customerr2/main.go  /START OMIT/,/END OMIT/
+
+*(+)*
+- match on error possible
+
+*(-)*
+- binary size penalty
+- verbose
+
+## overriding errors 
+
+too big to fit :'( 
+
+## Reporting errors
+
+## A common use case
+
+```
+                                                ▲
+                                                | user errors
+                            ┌───────────────────┴─────────────────────┐
+                            │                 REST API                │
+                            └─────────────────────────────────────────┘
+                                                ▲
+                                                │
+                                                │ domain errors
+                                                │
+                                          ┌─────┴──────┐
+                                          │            │
+                                          │            │
+                                          │   DOMAIN   │
+                                          │            │
+                                          │            │
+                                          └────────────┘
+```
+
+## Reporting to devs for monitoring/metrics/alerts
+
+- using traces (open telemetry) 
+- logs (zerolog)
+
+## to users
+
+.play ./serviceerror/errors.go
+
+## bonus: go routines errors
+
+## worker
+
+too big to fit :'( 
+
+## sync errgroup
+
+too big to fit :'( 
+
+## same chan
+
+too big to fit :'( 
+
+## separate chans
+
+too big to fit :'( 

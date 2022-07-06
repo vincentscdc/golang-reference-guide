@@ -45,8 +45,16 @@
 
 ## benchmarks
 
-- 
+- built-in
+- benchstats
+- [github actions for golang-common](https://github.com/monacohq/golang-common)
 
 ## Fuzzing
 
-- 
+## func
+
+.play fuzz/main.go /START OMIT/,/END OMIT/
+
+## let's fuzz
+
+.play fuzz/reverse_test.go /START OMIT/,/END OMIT/

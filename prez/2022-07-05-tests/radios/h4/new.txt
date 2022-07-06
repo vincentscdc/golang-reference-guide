@@ -1,0 +1,7 @@
+2022/07/06 13:48:26 Error writing response: mock error
+goos: darwin
+goarch: arm64
+pkg: radios/h4
+BenchmarkHi-10    	      43	  25628079 ns/op
+PASS
+ok  	radios/h4	5.400s

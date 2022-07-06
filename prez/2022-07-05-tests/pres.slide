@@ -1,0 +1,52 @@
+# golang tests
+
+2022-07-05 Vincent Serpoul
+
+## testable code
+
+- how to write code that can be tested well and easily
+- writing testable code is just as important as writing good tests
+- many devs say: "it can't be tested". It's often true, but they mostly wrote the code in a way that made it so
+- rewriting existing code to be testable is a pain but woirth it
+
+## example (hi 1 2 3)
+
+## how far should we test
+
+- priority goes to make testable code
+- try to achieve around 80% coverage, but knowing you can potentially reach 100%
+- focus on exported function first
+
+## custom testing frameworks
+
+- go test is an incredible tool, was built from the experience of many years at Google, try to stick to it
+- it is easier to read for everyone, especially if we all write those table tests
+- [why go does not have assertions?](https://go.dev/doc/faq#assertions)
+
+## TestMain
+
+- Super useful to set flags, create db connections...
+
+## sub tests
+
+- You can include t.Run inside t.Run, so you can define your setup/teardowns functions around sub tests
+
+## mocks
+
+- try to stay as close to reality as possible (net.Conn? database? git?)
+- create manual mocks helps you model your problem properly
+- interfaces are mocking points
+- use smaller interface when they make sense, so there s less to mock
+- if you mock, use the golang mock lib: github.com/golang/mock/gomock
+
+## DB tests
+
+- see [golang-reference-api](https://github.com/monacohq/golang-reference-api/blob/main/internal/payments/repo/sqlc/sqlc_test.go)
+
+## benchmarks
+
+- 
+
+## Fuzzing
+
+- 

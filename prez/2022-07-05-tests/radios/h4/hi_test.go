@@ -2,6 +2,7 @@ package h4
 
 import (
 	"bytes"
+	"encoding/json"
 	"flag"
 	"fmt"
 	"log"
@@ -11,7 +12,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/goccy/go-json"
 	"gitlab.com/AgentNemo/goradios"
 	"go.uber.org/goleak"
 )

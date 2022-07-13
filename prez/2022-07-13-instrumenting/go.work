@@ -1,0 +1,9 @@
+go 1.18
+
+use (
+	./0-none
+	./1-logs
+	./2-tracing
+	./3-stats
+	./4-pprof
+)

@@ -4,6 +4,18 @@
     curl -i 127.0.0.1:8081/hi
 ```
 
+## Benchmarks
+
+```bash
+    go test ./... -bench=. -benchmem
+```
+
+## leaks
+
+```bash
+    go test -leak
+```
+
 ## stats
 
 go to [stats viewer](http://localhost:18066/debug/statsview)
